@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style> 
+        body{
+            background-color: beige;
+        }
+
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        header{
+            color: white;
+            text-align: center;
+            margin: auto;
+            background-color: blue;
+            height: 60px;
+            padding: 20px 0px;
+        }
+
+        header h1{
+            font-size: 3em;
+            font-weight: lighter;
+        }
+
+        nav{
+            background-color: blue;
+            padding-bottom: 10px;
+        }
+        nav a{
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            
+        }
+
+        nav a:hover{
+            text-decoration: underline;
+            color: aqua;
+            background-color: beige;
+        }
+
+        section{
+            background-color: white;
+            display: block;
+            width: 800px;
+            max-height: 600px;
+            margin: auto;
+            padding: 10px;
+            border-radius:  10px ;
+            margin-top: 50px;
+            box-shadow: 2px 1px 20px black;;
+        }
+        
+        section h1{
+            text-indent: 21px;
+        }
+        section p {
+            text-indent: 10px;
+        }
+
+        div{
+            
+           
+           background-color: green;  
+            width: 200px;
+            height: 200px;
+            color: white;
+            text-align: center;
+            font: normal 20pt Arial;
+            line-height: 200px;
+            margin: auto;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Olá</h1>
+        <p>Testando</p>
+    </header>
+
+    <nav>
+         <a href="#">Notícias</a>
+         <a href="#">ASDdsd</a> 
+         <a href="#">ADSAD</a> 
+         <a href="#">VZvxc</a>
+
+    </nav>
+    <section>
+        <h1>Alo galerinha</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque laudantium odio, nostrum nam sint, suscipit ratione aspernatur natus corporis voluptas harum dolorem, culpa reprehenderit pariatur magni cupiditate dolorum? Repellat? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate velit nostrum odit dolores labore est quos iusto culpa reiciendis tenetur qui, totam consequuntur consequatur exercitationem facilis vitae. Itaque, culpa voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione temporibus dolorem rerum illum est, ea aliquam at error quisquam id officiis excepturi obcaecati placeat eveniet nihil optio molestias ipsum!</p>
+    </section>
+    <div id="caixinha">
+        Testando
+    </div>
+    <script>
+        var caixa = document.querySelector('div#caixinha');
+        caixa.addEventListener('mousedown', clicar);
+        caixa.addEventListener('mouseup', depois);
+        caixa.addEventListener('mouseout', sair)
+       
+        
+        function clicar(){
+            caixa.style.background = 'black';
+            caixa.innerHTML = 'Clicou!';
+        }
+        function entrar(){
+            caixa.style.background = 'green';
+            caixa.innerHTML = 'Entrou!';
+        }
+        function depois(){
+            caixa.style.background = 'green';
+            caixa.innerHTML = 'Testando'
+        }
+        
+    </script>
+</body>
+</html>

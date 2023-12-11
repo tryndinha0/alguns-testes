@@ -4,7 +4,7 @@ function somar(){
     var res = document.querySelector('div#res')
     
     if(valor1.value.length == 0 || valor2.value.length == 0){
-        res.innerHTML = 'Coloque dois número para que a soma seja feita!'
+        res.innerHTML = 'Coloque dois números para que a soma seja feita!'
     }else{
         var n1 = Number(valor1.value)
         var n2 = Number(valor2.value)

@@ -26,7 +26,7 @@
 
         header h1{
             font-size: 3em;
-            font-weight: lighter;
+            font-weight: light;
         }
 
         nav{
@@ -54,7 +54,7 @@
             max-height: 600px;
             margin: auto;
             padding: 10px;
-            border-radius:  10px ;
+            border-radius:  15px;
             margin-top: 50px;
             box-shadow: 2px 1px 20px black;;
         }
@@ -80,6 +80,11 @@
             margin-top: 10px;
 
         }
+
+        #caixinha{
+            user-select: none;
+        }
+
     </style>
 </head>
 <body>
@@ -97,7 +102,8 @@
     </nav>
     <section>
         <h1>Alo galerinha</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus atque laudantium odio, nostrum nam sint, suscipit ratione aspernatur natus corporis voluptas harum dolorem, culpa reprehenderit pariatur magni cupiditate dolorum? Repellat? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate velit nostrum odit dolores labore est quos iusto culpa reiciendis tenetur qui, totam consequuntur consequatur exercitationem facilis vitae. Itaque, culpa voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione temporibus dolorem rerum illum est, ea aliquam at error quisquam id officiis excepturi obcaecati placeat eveniet nihil optio molestias ipsum!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aspernatur expedita earum ducimus, harum debitis libero corrupti corporis! Necessitatibus doloribus possimus alias ullam rerum qui reprehenderit nisi, reiciendis quod ex! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, veritatis repellendus laboriosam, quas ad itaque quia quisquam, distinctio totam inventore consectetur deserunt quis delectus! Ipsum a illum expedita ea qui? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto facilis inventore veritatis esse laboriosam culpa nulla amet nesciunt, aliquid, asperiores suscipit, quibusdam doloremque veniam officia cupiditate aut laborum eligendi natus.
+        </p>
     </section>
     <div id="caixinha">
         Testando
@@ -105,22 +111,28 @@
     <script>
         var caixa = document.querySelector('div#caixinha');
         caixa.addEventListener('mousedown', clicar);
-        caixa.addEventListener('mouseup', depois);
-        caixa.addEventListener('mouseout', sair)
+        caixa.addEventListener('mouseleave', depois);
+        caixa.addEventListener('mouseenter', entrar);
+        caixa.addEventListener('mouseup', desclick); 
        
-        
         function clicar(){
             caixa.style.background = 'black';
-            caixa.innerHTML = 'Clicou!';
+            caixa.innerHTML = 'Clicando!';
         }
+        function desclick(){
+          caixa.innerHTML = 'Entrou!'
+          caixa.style.background = 'green'
+        }
+        
         function entrar(){
             caixa.style.background = 'green';
             caixa.innerHTML = 'Entrou!';
         }
         function depois(){
-            caixa.style.background = 'green';
-            caixa.innerHTML = 'Testando'
+            caixa.style.background = 'red';
+            caixa.innerHTML = 'Saiu!'
         }
+        
         
     </script>
 </body>

@@ -1,16 +1,13 @@
-function tabuada(){
-    var num = document.querySelector('input#num')
-    var tab = document.querySelector('select#seltab')
-
-    if(num.value.length == 0){
-        alert('Insira um número para começar')
+function tabuada() {
+    tab = document.querySelector('p#num')
+    tab.innerHTML = ''
+    num = Number(document.querySelector('input#num').value)
+    if (num == '' || num == 0) {
+        alert('coloque numero valido porra')
     }else{
-        var  n = Number(num.value)
-        tab.innerHTML = ''
-        for (var c = 1;c<=10;c++){
-            var item = document.createElement('option')
-            item.innerText = `${n} x ${c} = ${n*c}`
-            tab.appendChild(item)
+        for (a = 1; a <= 10; a++) {
+            tab.innerHTML += `${num}x${a} = ${num * a}<br>`
+
         }
     }
 }
